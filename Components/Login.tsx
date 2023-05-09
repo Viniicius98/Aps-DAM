@@ -1,23 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Button } from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationProp } from '@react-navigation/native';
+import styled from 'styled-components/native';
 
-export default function Login({ navigation }: { navigation: NavigationProp<any> }) {
+
+const Container = styled.View`
+
+
+`
+
+
+
+export default function Login({navigation}:any) {
   return (
-    <View style={styles.container}>
+    <View>
       <Text>Minha Tela</Text>
-      <Button title='aperte Aqui' onPress={() => navigation.navigate('AccessScreen')}></Button>
+      <Button title='aperte Aqui'/>
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

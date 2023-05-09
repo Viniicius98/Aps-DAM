@@ -5,14 +5,12 @@ import Login from "../Components/Login"
 import { NavigationProp } from '@react-navigation/native';
 
 
-type LoginScreenProps = {
-  navigation: NavigationProp<any>;
-}
 
-export default function LoginScreen({ navigation }: LoginScreenProps) {
+
+export default function LoginScreen() {
   return (
     <View style={styles.container}>
-      <Login navigation={navigation} />
+      <Login  />
     </View>
   );
 }
