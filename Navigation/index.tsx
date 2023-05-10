@@ -11,6 +11,7 @@ import LoginScreen from "../Screens/LoginScreen";
 import { RootStackParamList } from "../types";
 import { ColorSchemeName } from "react-native/types";
 import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import HeaderComponent from "../Components/Header";
 
 export default function Navigation({
     colorScheme,
@@ -40,6 +41,12 @@ function RootNavigator(){
              <Stack.Screen
             name="Access"
             component={AccessScreen}
+            options={()=>({
+                headerTitle:() => <HeaderComponent />,
+                gestureEnabled:false,
+                headerBackVisible:false,
+            })}
+            
             />
         </Stack.Navigator>
     )
