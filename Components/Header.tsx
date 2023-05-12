@@ -5,7 +5,7 @@ export default function HeaderComponent(){
     return (
         <SafeAreaView style={headerStyle.headerContainer}>
            <Image style={headerStyle.image} source={require("../assets/images/weightlifter.png")} />
-           <Text style={headerStyle.title}></Text>
+           <Text style={headerStyle.title}>Home</Text>
         </SafeAreaView>
     )
 }

@@ -17,6 +17,9 @@ const headerStyle = StyleSheet.create({
         fontWeight: 'bold',
         color:'#fff',
         padding:25,
+        marginTop:2,
+        marginLeft:50,
+        
 
       },
   });

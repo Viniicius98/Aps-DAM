@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 
 // Screens
-import AccessScreen from "../Screens/AccessScreen";
+import HomeScreen from "../Screens/HomeScreen";
 import LoginScreen from "../Screens/LoginScreen";
 
 //Components
@@ -39,12 +39,13 @@ function RootNavigator(){
             options={{headerShown:false}}
             />
              <Stack.Screen
-            name="Access"
-            component={AccessScreen}
+            name="Home"
+            component={HomeScreen}
             options={()=>({
                 headerTitle:() => <HeaderComponent />,
                 gestureEnabled:false,
                 headerBackVisible:false,
+                headerStyle:{backgroundColor:'#41fca3'}
             })}
             
             />

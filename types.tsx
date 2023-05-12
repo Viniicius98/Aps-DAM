@@ -9,7 +9,7 @@ declare global {
 
 export type RootStackParamList = {
     Login: undefined;
-    Access: { name: string ,email:string};
+    Home: { name: string ,email:string};
 
 }
 

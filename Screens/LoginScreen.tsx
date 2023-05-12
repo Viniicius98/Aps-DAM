@@ -28,7 +28,7 @@ export default function LoginScreen() {
           onChangeText={(newEmail) => setEmail(newEmail)}
           />
         <TouchableOpacity style={loginStyle.button} onPress={(()=>{
-          navigation.navigate('Access',{name:'Vinicius',email:email});
+          navigation.navigate('Home',{name:'Vinicius',email:email});
         })}>
           <Text style={loginStyle.text}>Entrar</Text>
        </TouchableOpacity>
