@@ -4,20 +4,26 @@ const homeStyle = StyleSheet.create({
     homeContainer:{
        width:'100%',
        height:'100%',
-       backgroundColor:'#e6e9ed',
-       justifyContent: 'center',
+       backgroundColor:'#336699',
+      
     },
+    background:{
+      width:450,
+      height:150,
+      marginTop:0,
+      opacity:0.5,
+      backgroundColor:'#050505',
+   },
     itemsContainer:{
         width:'100%',
-        height:'40%',
-        marginBottom: 0,
+        height:'60%',
     },
     items: {
         width: '100%',
         height: 90,
         marginLeft: 4,
         paddingLeft: 8,
-        backgroundColor: "#a5c4e0",
+        backgroundColor:'#6688CC',
         borderBottomColor: "#000",
         borderBottomWidth: 8,
       },

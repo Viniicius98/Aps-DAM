@@ -8,8 +8,9 @@ declare global {
 }
 
 export type RootStackParamList = {
-    Login: undefined;
-    Home: { name: string ,email:string};
+    Login:{ name: string ,email:string,weight:string,age:string,height:string};
+    Home: { name: string ,email:string,weight:string,age:string,height:string};
+    Register:undefined;
 
 }
 

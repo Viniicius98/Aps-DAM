@@ -3,7 +3,6 @@ import { StyleSheet, Text, View,Button } from 'react-native';
 const headerStyle = StyleSheet.create({
     headerContainer:{
        width:410,
-       backgroundColor:'#41fca3',
        flexDirection: 'row',
        
     },
