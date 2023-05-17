@@ -1,18 +1,43 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  Text,
-  View,
-  SafeAreaView,
-  TextInput,
-  TouchableOpacity,
-  Button,
-} from "react-native";
+import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
 import "react-native-gesture-handler";
-import registerStyle from "../../styles/registerStyles";
+import initialStyle from "../../styles/initialStyles";
 import { useNavigation } from "@react-navigation/native";
-import { useEffect, useState } from "react";
-import { ScrollView } from "react-native-gesture-handler";
 
 export default function InitialScreen() {
-  return <SafeAreaView style={registerStyle.containerRegister}></SafeAreaView>;
+  const navigation = useNavigation();
+
+  const handleRegisterPress = () => {
+    navigation.navigate("Register");
+  };
+
+  const handleLoginPress = () => {
+    navigation.navigate("Login", {
+      name: "",
+      email: "",
+      age: "",
+      weight: "",
+      height: "",
+    });
+  };
+
+  return (
+    <SafeAreaView style={initialStyle.containerInitial}>
+      <View style={initialStyle.containerButton}>
+        <TouchableOpacity
+          style={initialStyle.button}
+          onPress={handleRegisterPress}
+        >
+          <Text style={initialStyle.text}>Cadastrar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={initialStyle.button}
+          onPress={handleLoginPress}
+        >
+          <Text style={initialStyle.text}>Login</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
 }

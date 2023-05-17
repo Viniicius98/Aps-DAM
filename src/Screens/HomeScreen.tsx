@@ -87,7 +87,7 @@ export default function HomeScreen() {
         style={homeStyle.background}
         source={require("../../assets/images/background.jpg")}
       />
-      <Perfil name={name} idade={age} peso={weight} altura={height} />
+      <Perfil name = {name} idade = {age} peso = {weight} altura = {height} />
       <View style={homeStyle.itemsContainer}>
         <FlatList
           data={FlatLinks}
