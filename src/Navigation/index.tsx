@@ -1,12 +1,14 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { CardStyleInterpolators } from "@react-navigation/stack";
+import "react-native-reanimated";
+import { enableScreens } from "react-native-screens";
 
 // Screens
 import HomeScreen from "../screens/HomeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import InitialScreen from "../screens/InitialScreen";
+import AboutScreen from "../screens/AboutScreen";
 
 //Components
 import HeaderComponent from "../components/Header";
@@ -34,6 +36,7 @@ export default function Navigation({
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+enableScreens();
 
 function RootNavigator() {
   return (
@@ -46,8 +49,6 @@ function RootNavigator() {
           gestureEnabled: false,
           headerBackVisible: false,
           headerStyle: { backgroundColor: "#336699" },
-          cardStyle: { backgroundColor: "white" },
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Estilo de transição horizontal
         })}
       />
       <Stack.Screen
@@ -59,7 +60,6 @@ function RootNavigator() {
           headerBackVisible: false,
           headerStyle: { backgroundColor: "#336699" },
           cardStyle: { backgroundColor: "white" },
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Estilo de transição horizontal
         })}
       />
       <Stack.Screen
@@ -71,7 +71,7 @@ function RootNavigator() {
           headerBackVisible: false,
           headerStyle: { backgroundColor: "#336699" },
           cardStyle: { backgroundColor: "white" },
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Estilo de transição horizontal
+          // Estilo de transição horizontal
         })}
       />
       <Stack.Screen
@@ -83,7 +83,17 @@ function RootNavigator() {
           headerBackVisible: false,
           headerStyle: { backgroundColor: "#336699" },
           cardStyle: { backgroundColor: "white" },
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // Estilo de transição horizontal
+          // Estilo de transição horizontal
+        })}
+      />
+      <Stack.Screen
+        name="About"
+        component={AboutScreen}
+        options={() => ({
+          headerTitle: () => <HeaderComponent title="Sobre" />,
+          gestureEnabled: false,
+          headerBackVisible: false,
+          headerStyle: { backgroundColor: "#336699" },
         })}
       />
     </Stack.Navigator>

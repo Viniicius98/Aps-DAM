@@ -38,6 +38,7 @@ export default function InitialScreen() {
           <Text style={initialStyle.text}>Login</Text>
         </TouchableOpacity>
       </View>
+      <StatusBar style="dark" />
     </SafeAreaView>
   );
 }
